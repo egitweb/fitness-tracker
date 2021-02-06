@@ -17,17 +17,24 @@ app.use(apiRoutes);
 app.use(viewRoutes);
 
 
-mongoose.connect( "mongodb://localhost/workout", {
+//CONNECTION TO DATA BASE
+mongoose.connect( "mongodb+srv://Eug-admin:admin.mongo95@cluster0.yq9ln.mongodb.net/workouts?retryWrites=true&w=majority", {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
     useFindAndModify: false
+
   }
 );
 
-
+//MAIN PAGE
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
 
 
-app.listen(PORT, () => console.log("listening on port: ", PORT));
+app.listen(PORT, () => console.log("GO TO localhost:" + PORT));
+
+
+

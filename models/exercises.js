@@ -25,4 +25,3 @@ const Exercises = mongoose.model("Exercises", exerciseSchema);
 module.exports = Exercises;
 
 
-
