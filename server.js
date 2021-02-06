@@ -18,7 +18,10 @@ app.use(viewRoutes);
 
 
 //CONNECTION TO DATA BASE
-mongoose.connect( "mongodb+srv://Eug-admin:admin.mongo95@cluster0.yq9ln.mongodb.net/workouts?retryWrites=true&w=majority", {
+//LOCALDATA BASE - mongodb://localhost/workout
+// 
+
+mongoose.connect( "mongodb://localhost/workout", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,

@@ -3,7 +3,7 @@ let db = require("../models");
 
 
 //DATABASE CONNECTION
-mongoose.connect("mongodb+srv://Eug-admin:admin.mongo95@cluster0.yq9ln.mongodb.net/workouts?retryWrites=true&w=majority", {
+mongoose.connect("mongodb://localhost/workout", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
